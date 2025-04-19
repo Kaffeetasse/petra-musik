@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "de-de" }}">
+<html lang="{{ site.Language.LanguageCode }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen">
+    {{ hugo.Generator }}
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="{{ "css/custom.css" | relURL }}" as="style">
+    <link rel="preload" href="{{ "images/petra.jpg" | relURL }}" as="image" fetchpriority="high">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
-    {{ block "head" . }}{{ end }}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
+    
+    <!-- Open Graph and Twitter Card data -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ "images/petra.jpg" | absURL }}">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen">
+    <meta name="twitter:image" content="{{ "images/petra.jpg" | absURL }}">
+
+    {{ block "head" . }}{{ partials.Include "head-additions.html" . }}{{ end }}
 </head>
 <body>
+    {{ block "header" . }}
     <header class="site-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
                 </div>
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="{{ .Site.BaseURL }}" class="{{ if .IsHome }}active{{ end }}">Home</a></li>
-                        <li><a href="{{ "contact" | relURL }}" class="{{ if eq .RelPermalink "/contact/" }}active{{ end }}">Kontakt</a></li>
-                        {{ if not (eq .Site.Params.showGallery false) }}
-                        <li><a href="{{ "gallery" | relURL }}" class="{{ if eq .RelPermalink "/gallery/" }}active{{ end }}">Galerie</a></li>
+                        {{ range .Site.Menus.main }}
+                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                         {{ end }}
-                        <li><a href="{{ "imprint" | relURL }}" class="{{ if eq .RelPermalink "/imprint/" }}active{{ end }}">Impressum</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-button" aria-label="Menü öffnen">
@@ -35,26 +57,30 @@
             </div>
         </div>
     </header>
+    {{ end }}
 
     <main>
         {{ block "main" . }}{{ end }}
     </main>
 
+    {{ block "footer" . }}
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+                    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
                 </div>
                 <div class="footer-nav">
                     <ul>
-                        <li><a href="{{ "imprint" | relURL }}">Impressum</a></li>
-                        <li><a href="{{ "contact" | relURL }}">Kontakt</a></li>
+                        {{ range .Site.Menus.main }}
+                        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                        {{ end }}
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+    {{ end }}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
