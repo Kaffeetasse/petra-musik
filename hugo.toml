@@ -1,4 +1,4 @@
-baseURL = 'https://petramusik.de/'
+baseURL = 'https://petra.robingeiger.de/'
 languageCode = 'de-de'
 title = 'Petra - Musikerin'
 theme = 'ananke'
