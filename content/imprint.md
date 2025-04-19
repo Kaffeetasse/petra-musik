@@ -13,7 +13,7 @@ Musterstraße 123
 ## Kontakt
 
 **Telefon:** +49 15XX XXXX XXX  
-**E-Mail:** kontakt@petra-musikerin.de
+**E-Mail:** kontakt@petramusik.de
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 

@@ -14,8 +14,7 @@ Mit jahrelanger Erfahrung biete ich einfühlsame und stimmungsvolle musikalische
 
 Mein Repertoire umfasst klassische Stücke, moderne Interpretationen und traditionelle Musik. Gemeinsam finden wir den perfekten musikalischen Rahmen für Ihren Anlass.
 
-Kontaktieren Sie mich gerne für ein persönliches Beratungsgespräch.
-
+Kontaktieren Sie mich gerne für ein persönliches Beratungsgespräch.  
 Ich freue mich darauf, Ihren besonderen Tag musikalisch zu begleiten.
 
 ![Petra](/images/petra.jpg)
