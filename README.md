@@ -72,4 +72,3 @@ To set up GitHub Pages deployment:
 - **Content**: Edit files in the `content/` directory
 - **Images**: Add image files to `static/images/`
 - **Styling**: Customize styles in `assets/` or through Hugo parameters in `hugo.toml`
-
