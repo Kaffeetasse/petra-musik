@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'de-de'
+title = 'Petra - Musikerin'
+theme = 'ananke'
