@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="hero">
+    <div class="hero-image">
+        <img src="{{ "images/petra.jpg" | relURL }}" alt="Petra - Musikerin">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ .Title }}</h1>
+            <p class="hero-subtitle">Musikalische Begleitung für besondere Momente</p>
+            <a href="{{ "contact" | relURL }}" class="cta-button">Kontaktieren Sie mich</a>
+        </div>
+    </div>
+</div>
+
+<section class="intro">
+    <div class="container">
+        <div class="intro-content">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <h2 class="section-title">Meine Dienstleistungen</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ "icons/wedding.svg" | relURL }}" alt="Hochzeit" onerror="this.src='{{ "icons/wedding-fallback.png" | relURL }}'; this.onerror=null;">
+                </div>
+                <h3>Hochzeiten</h3>
+                <p>Festliche musikalische Begleitung für Ihren besonderen Tag, von der Trauung bis zur Feier.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ "icons/funeral.svg" | relURL }}" alt="Beerdigung" onerror="this.src='{{ "icons/funeral-fallback.png" | relURL }}'; this.onerror=null;">
+                </div>
+                <h3>Beerdigungen</h3>
+                <p>Einfühlsame und würdevolle musikalische Begleitung für Abschiedszeremonien.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <img src="{{ "icons/event.svg" | relURL }}" alt="Events" onerror="this.src='{{ "icons/event-fallback.png" | relURL }}'; this.onerror=null;">
+                </div>
+                <h3>Events</h3>
+                <p>Stimmungsvolle Musik für Firmenfeiern, Jubiläen und andere besondere Anlässe.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Lassen Sie uns gemeinsam Ihren besonderen Moment gestalten</h2>
+            <p>Kontaktieren Sie mich für weitere Informationen und Buchungsanfragen.</p>
+            <a href="{{ "contact" | relURL }}" class="cta-button">Jetzt anfragen</a>
+        </div>
+    </div>
+</section>
+{{ end }} 

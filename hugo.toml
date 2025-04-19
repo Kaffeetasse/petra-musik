@@ -2,3 +2,26 @@ baseURL = 'https://example.org/'
 languageCode = 'de-de'
 title = 'Petra - Musikerin'
 theme = 'ananke'
+
+[params]
+  description = "Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen"
+  showGallery = true
+  mainSections = ["post"]
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Kontakt"
+    url = "/contact/"
+    weight = 2
+  [[menu.main]]
+    name = "Galerie"
+    url = "/gallery/"
+    weight = 3
+  [[menu.main]]
+    name = "Impressum"
+    url = "/imprint/"
+    weight = 4

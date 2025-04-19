@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "de-de" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    {{ block "head" . }}{{ end }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="{{ .Site.BaseURL }}" class="{{ if .IsHome }}active{{ end }}">Home</a></li>
+                        <li><a href="{{ "contact" | relURL }}" class="{{ if eq .RelPermalink "/contact/" }}active{{ end }}">Kontakt</a></li>
+                        {{ if not (eq .Site.Params.showGallery false) }}
+                        <li><a href="{{ "gallery" | relURL }}" class="{{ if eq .RelPermalink "/gallery/" }}active{{ end }}">Galerie</a></li>
+                        {{ end }}
+                        <li><a href="{{ "imprint" | relURL }}" class="{{ if eq .RelPermalink "/imprint/" }}active{{ end }}">Impressum</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-button" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="{{ "imprint" | relURL }}">Impressum</a></li>
+                        <li><a href="{{ "contact" | relURL }}">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mainNav = document.querySelector('.main-nav');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                mobileMenuButton.classList.toggle('active');
+            });
+        });
+    </script>
+
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html> 

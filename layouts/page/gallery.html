@@ -1,0 +1,101 @@
+{{ define "main" }}
+<div class="page-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+<div class="gallery-section">
+    <div class="container">
+        <div class="gallery-intro">
+            {{ .Content }}
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Gallery Images -->
+            <div class="gallery-item">
+                <a href="{{ "images/petra.jpg" | relURL }}" class="gallery-image-link" data-caption="Petra - Musikerin">
+                    <img src="{{ "images/petra.jpg" | relURL }}" alt="Petra - Musikerin" class="gallery-image">
+                </a>
+            </div>
+            
+            <!-- Hier können weitere Bilder hinzugefügt werden -->
+            <div class="gallery-item">
+                <a href="{{ "images/performance1.jpg" | relURL }}" class="gallery-image-link" data-caption="Auftritt bei einer Hochzeit">
+                    <div class="placeholder-image">
+                        <span>Hochzeit</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="{{ "images/performance2.jpg" | relURL }}" class="gallery-image-link" data-caption="Musikalische Begleitung">
+                    <div class="placeholder-image">
+                        <span>Begleitung</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="{{ "images/performance3.jpg" | relURL }}" class="gallery-image-link" data-caption="Konzert">
+                    <div class="placeholder-image">
+                        <span>Konzert</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryLinks = document.querySelectorAll('.gallery-image-link');
+        
+        galleryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const imageSrc = this.getAttribute('href');
+                const caption = this.getAttribute('data-caption');
+                
+                // Simple lightbox
+                const lightbox = document.createElement('div');
+                lightbox.className = 'lightbox';
+                
+                const lightboxContent = document.createElement('div');
+                lightboxContent.className = 'lightbox-content';
+                
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = caption;
+                
+                const captionElement = document.createElement('div');
+                captionElement.className = 'lightbox-caption';
+                captionElement.textContent = caption;
+                
+                const closeButton = document.createElement('button');
+                closeButton.className = 'lightbox-close';
+                closeButton.innerHTML = '&times;';
+                closeButton.addEventListener('click', function() {
+                    document.body.removeChild(lightbox);
+                });
+                
+                lightboxContent.appendChild(img);
+                lightboxContent.appendChild(captionElement);
+                lightbox.appendChild(closeButton);
+                lightbox.appendChild(lightboxContent);
+                
+                document.body.appendChild(lightbox);
+                
+                lightbox.addEventListener('click', function(e) {
+                    if (e.target === lightbox) {
+                        document.body.removeChild(lightbox);
+                    }
+                });
+            });
+        });
+    });
+</script>
+{{ end }} 
