@@ -244,6 +244,38 @@ main {
     font-size: 1.1rem;
 }
 
+/* Add styling for lists in the intro content */
+.intro-content ul {
+    display: inline-block;
+    text-align: left;
+    margin: 2rem auto;
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.intro-content ul li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.intro-content ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.intro-content ul li strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
 /* Services Section */
 .services {
     padding: 5rem 0;
