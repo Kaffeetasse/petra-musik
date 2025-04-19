@@ -4,7 +4,7 @@ title = 'Petra - Musikerin'
 theme = 'ananke'
 
 [params]
-  description = "Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen"
+  description = "Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen und Umgebung"
   showGallery = true
   mainSections = ["post"]
   
