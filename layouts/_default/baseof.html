@@ -9,16 +9,16 @@
     {{ hugo.Generator }}
     
     <!-- Preload critical assets -->
+    <link rel="preload" href="{{ "css/fonts.css" | relURL }}" as="style">
     <link rel="preload" href="{{ "css/custom.css" | relURL }}" as="style">
     <link rel="preload" href="{{ "images/petra.jpg" | relURL }}" as="image" fetchpriority="high">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" as="style">
     
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
+    <link rel="icon" type="image/png" href="{{ "images/favicon/favicon-32x32.png" | relURL }}">
     
     <!-- Open Graph and Twitter Card data -->
     <meta property="og:title" content="{{ .Title }}">

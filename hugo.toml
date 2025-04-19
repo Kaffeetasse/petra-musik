@@ -2,8 +2,19 @@ baseURL = 'https://example.org/'
 languageCode = 'de-de'
 title = 'Petra - Musikerin'
 theme = 'ananke'
+defaultContentLanguage = 'de'
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[languages]
+  [languages.de]
+    languageCode = 'de-DE'
+    languageDirection = 'ltr'
+    languageName = 'Deutsch'
+    weight = 1
 
 [params]
+  favicon = "/images/favicon/favicon.ico"
   description = "Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen und Umgebung"
   showGallery = true
   mainSections = ["post"]
