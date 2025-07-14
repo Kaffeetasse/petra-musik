@@ -25,6 +25,60 @@
                     
                 </div>
             </div>
+
+            <div class="contact-form">
+                <form action="https://www.formpost.eu/f/0be39180" method="POST" class="contact-form-element">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tel">Telefon (optional)</label>
+                        <input type="tel" id="tel" name="tel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="event">Art der Veranstaltung</label>
+                        <select id="event" name="event" required>
+                            <option value="" disabled selected>Bitte wählen</option>
+                            <option value="Hochzeit">Hochzeit</option>
+                            <option value="Beerdigung">Beerdigung</option>
+                            <option value="Jubiläum">Jubiläum</option>
+                            <option value="Firmenfeier">Firmenfeier</option>
+                            <option value="Sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Datum der Veranstaltung</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Ihre Nachricht</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <div class="privacy-check">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. Mehr dazu im <a href="{{ "imprint" | relURL }}">Impressum</a>.</label>
+                        </div>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none;">
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">Anfrage senden</button>
+                    </div>
+                </form>
+            </div>
             
         </div>
     </div>
