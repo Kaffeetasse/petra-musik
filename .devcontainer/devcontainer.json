@@ -25,7 +25,8 @@
 	// "remoteUser": "root"
 	"postCreateCommand": {
 		"fixVolumePerms": "sudo chown -R $(whoami): /home/vscode/.claude",
-		"updateClaude": "sudo npm i -g @anthropic-ai/claude-code"
+		"updateClaude": "sudo npm i -g @anthropic-ai/claude-code",
+		"exifRemoveTool": "sudo apt-get update && sudo apt-get install libimage-exiftool-perl -y"
 	},
 	"mounts": [
 		"source=claude-code-config,target=/home/vscode/.claude,type=volume",
