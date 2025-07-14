@@ -1,6 +1,6 @@
 ---
 title: "Über mich"
-description: "Erfahren Sie mehr über Petra, professionelle Musikerin aus Bempflingen mit über 30 Jahren Bühnenerfahrung. Von gefühlvollen Balladen bis hin zu mitreißenden Pop- und Schlagerhits."
+description: "Erfahren Sie mehr über Petra, professionelle Musikerin aus Bempflingen mit über 30 Jahren Bühnenerfahrung. Von gefühlvollen Balladen über mitreißende Pop- und Schlagerhits bis hin zu kraftvollen Rockhits."
 date: 2025-01-14T10:00:00+01:00
 draft: false
 ---
@@ -48,7 +48,7 @@ Als Frontsängerin der "Grafenberger Spatzen" bewies ich einmal mehr meine musik
 
 ![Petra beim Singen](/images/petra-piano-elegant.jpg)
 
-Über drei Jahrzehnte Bühnenerfahrung, unzählige Auftritte und die kontinuierliche Weiterentwicklung meiner Stimme haben mich zu der Künstlerin gemacht, die ich heute bin. Mein umfangreiches Repertoire reicht von gefühlvollen Balladen bis hin zu mitreißenden Pop- und Schlagerhits – immer perfekt abgestimmt auf Ihren besonderen Anlass.
+Über drei Jahrzehnte Bühnenerfahrung, unzählige Auftritte und die kontinuierliche Weiterentwicklung meiner Stimme haben mich zu der Künstlerin gemacht, die ich heute bin. Mein umfangreiches Repertoire reicht von gefühlvollen Balladen über mitreißende Pop- und Schlagerhits bis hin zu kraftvollen Rockhits – immer perfekt abgestimmt auf Ihren besonderen Anlass.
 
 Was mich auszeichnet? Es ist die Kombination aus professioneller Perfektion und echter Emotionalität. Ich singe nicht einfach nur Lieder – ich erzähle Geschichten, wecke Erinnerungen und schaffe unvergessliche Momente. Dabei gehe ich auf Ihre individuellen Wünsche ein und gestalte gemeinsam mit Ihnen das perfekte musikalische Programm.
 
