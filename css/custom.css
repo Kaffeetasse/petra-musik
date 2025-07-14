@@ -370,6 +370,24 @@ main {
     padding: 4rem 0;
 }
 
+/* Article Content Images */
+.page-content article img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Ensure images don't break out of container on smaller screens */
+@media (max-width: 850px) {
+    .page-content article img {
+        max-width: 100%;
+    }
+}
+
 /* Contact Page */
 .contact-section {
     padding: 4rem 0;
