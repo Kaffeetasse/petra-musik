@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-    <meta name="description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen">
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="canonical" href="{{ .Permalink }}">
     {{ hugo.Generator }}
     
     <!-- Preload critical assets -->
@@ -21,18 +22,19 @@
     <link rel="icon" type="image/png" href="{{ "images/favicon/favicon-32x32.png" | relURL }}">
     
     <!-- Open Graph and Twitter Card data -->
-    <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen und Umgebung">
+    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "images/petra.jpg" | absURL }}">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="Musikalische Begleitung für Hochzeiten, Beerdigungen und Events in Bempflingen und Umgebung">
+    <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="twitter:image" content="{{ "images/petra.jpg" | absURL }}">
 
     {{ block "head" . }}{{ partials.Include "head-additions.html" . }}{{ end }}
+    {{ partials.Include "structured-data.html" . }}
 </head>
 <body>
     {{ block "header" . }}

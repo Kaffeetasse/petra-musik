@@ -1,5 +1,6 @@
 ---
 title: "Über mich"
+description: "Erfahren Sie mehr über Petra, professionelle Musikerin aus Bempflingen mit über 30 Jahren Bühnenerfahrung. Von klassischen Arien bis moderne Hits."
 date: 2025-01-14T10:00:00+01:00
 draft: false
 ---

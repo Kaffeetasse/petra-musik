@@ -1,5 +1,6 @@
 ---
 title: "Galerie"
+description: "Sehen Sie Bilder von Petras Auftritten bei Hochzeiten, Beerdigungen und Events. Eindrücke der professionellen Musikerin aus Bempflingen."
 date: 2023-10-26T08:48:45+02:00
 draft: false
 ---

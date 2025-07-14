@@ -6,6 +6,17 @@ defaultContentLanguage = 'de'
 googleAnalytics = ""
 enableRobotsTXT = true
 
+# SEO and sitemap settings
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
 [languages]
   [languages.de]
     languageCode = 'de-DE'

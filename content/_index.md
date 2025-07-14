@@ -1,5 +1,6 @@
 ---
 title: "Willkommen"
+description: "Professionelle Musikerin aus Bempflingen für Hochzeiten, Beerdigungen und Events. Jahrelange Erfahrung, vielseitiges Repertoire. Jetzt kontaktieren!"
 date: 2023-10-26T08:48:45+02:00
 draft: false
 ---
