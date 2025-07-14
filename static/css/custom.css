@@ -526,6 +526,7 @@ main {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    position: relative;
 }
 
 .gallery-item:hover {
@@ -537,11 +538,16 @@ main {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center;
     transition: var(--transition);
+    display: block;
 }
 
 .gallery-image-link {
     display: block;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
 }
 
 .gallery-image-link:hover .gallery-image {
@@ -578,18 +584,26 @@ main {
     position: relative;
     max-width: 90%;
     max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .lightbox-content img {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 80vh;
+    display: block;
 }
 
 .lightbox-caption {
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    margin: 0;
+    position: relative;
 }
 
 .lightbox-close {
