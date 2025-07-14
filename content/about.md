@@ -33,7 +33,7 @@ Um meinem Publikum noch mehr bieten zu können, erweiterte ich meine Fähigkeite
 ### 1996 - 2004: Die goldenen Jahre mit "TUXEDO"
 Als Frontsängerin von "TUXEDO" erlebte ich acht unvergessliche Jahre voller musikalischer Höhepunkte. Diese Zeit prägte mich nachhaltig – nicht nur stimmlich, sondern auch in meiner Bühnenpräsenz und Professionalität. Zu den absoluten Highlights zählen unsere Auftritte bei der renommierten SCHOWO (Schorndorfer Woche) und die ehrenvolle Gelegenheit, als Vorgruppe der Kultband Modern Talking aufzutreten. Diese Erfahrungen auf großen Bühnen vor tausenden Menschen lehrten mich, jedes Publikum zu begeistern – egal ob 50 oder 5000 Zuhörer.
 
-![Auftritt im Festzelt](/images/petra-festival.jpg)
+![Auftritt im Festzelt](/images/petra-festival-performance.jpg)
 
 ### 2001 - 2006: Talentförderung als Jury-Mitglied
 Meine Erfahrung gab ich gerne weiter: Als Jury-Mitglied beim Talentwettbewerb Schorndorf durfte ich junge Nachwuchstalente auf ihrem Weg begleiten und fördern. Diese Tätigkeit schärfte meinen Blick für Qualität und Authentizität in der Musik.
@@ -46,7 +46,7 @@ Als Frontsängerin der "Grafenberger Spatzen" bewies ich einmal mehr meine musik
 
 ## Heute: Ihre persönliche Sängerin für besondere Momente
 
-![Petra beim Singen](/images/petra-singing.jpg)
+![Petra beim Singen](/images/petra-piano-elegant.jpg)
 
 Über drei Jahrzehnte Bühnenerfahrung, unzählige Auftritte und die kontinuierliche Weiterentwicklung meiner Stimme haben mich zu der Künstlerin gemacht, die ich heute bin. Mein umfangreiches Repertoire reicht von klassischen Arien über gefühlvolle Balladen bis hin zu mitreißenden Pop- und Schlagerhits – immer perfekt abgestimmt auf Ihren besonderen Anlass.
 
