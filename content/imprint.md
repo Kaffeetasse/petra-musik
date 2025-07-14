@@ -1,5 +1,5 @@
 ---
-title: "Impressum"
+title: 'Impressum'
 date: 2023-10-26T08:48:45+02:00
 draft: false
 ---
@@ -14,6 +14,7 @@ Deutschland
 ## Kontakt
 
 <!-- **Telefon:** +49 15XX XXXX XXX  -->
+
 **E-Mail:** kontakt@petramusik.de
 
 ## Haftungsausschluss
@@ -35,3 +36,11 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unt
 Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
 Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
 Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
+
+## Kontaktaufnahme per Kontaktformular
+
+Sollten Sie mir Anfragen über mein Kontaktformular zukommen lassen, werden Ihre Daten zwecks Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 DSGVO) durch den Dienst Formpost.eu verarbeitet und an mich weitergeleitet. Die Übermittlung an Formpost.eu erfolgt über das HTTPS-Protokoll.
+
+Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Formpost.eu wird in Deutschland gehostet.
+
+Weitere Informationen finden Sie auf der [Datenschutz Seite](https://www.formpost.eu/datenschutz) von Formpost.eu.
