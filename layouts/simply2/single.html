@@ -1,0 +1,198 @@
+{{ define "main" }}
+<div class="simply2-hero">
+    <div class="container">
+        <div class="simply2-logo-container">
+            <img src="{{ "images/simply2.png" | relURL }}" alt="Simply2 - Petra Buchmann & Helmut Ziegler" class="simply2-logo">
+        </div>
+        <p class="simply2-tagline">Die besten Hits der 80er & 90er Jahre</p>
+    </div>
+</div>
+
+<div class="simply2-content">
+    <div class="container">
+        {{ .Content }}
+    </div>
+</div>
+
+<div class="simply2-cta">
+    <div class="container">
+        <h2>Buchen Sie Simply2 für Ihre Veranstaltung</h2>
+        <p>Bringen Sie den Sound der 80er und 90er zu Ihrem Event!</p>
+        <a href="{{ "contact" | relURL }}" class="btn-simply2">Jetzt anfragen</a>
+    </div>
+</div>
+{{ end }}
+
+{{ define "header" }}
+<style>
+/* Simply2 Page Styles - Based on Logo Colors */
+.simply2-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 3px solid #5dade2;
+}
+
+.simply2-logo-container {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.simply2-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.simply2-tagline {
+    color: #5dade2;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.simply2-content {
+    background: #fff;
+    padding: 4rem 0;
+}
+
+.simply2-content .container {
+    max-width: 900px;
+}
+
+.simply2-content h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #c9a961;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.simply2-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.simply2-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.simply2-content ul li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+.simply2-content ul li:before {
+    content: "♪";
+    position: absolute;
+    left: 0;
+    color: #c9a961;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.simply2-content strong {
+    color: #2c3e50;
+}
+
+.simply2-cta {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+.simply2-cta h2 {
+    color: #c9a961;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.simply2-cta p {
+    color: #5dade2;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-simply2 {
+    display: inline-block;
+    background: #c9a961;
+    color: #2c3e50;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-simply2:hover {
+    background: #d4b976;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 169, 97, 0.4);
+    color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .simply2-hero {
+        padding: 2rem 0;
+    }
+
+    .simply2-logo-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .simply2-tagline {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .simply2-content {
+        padding: 2rem 0;
+    }
+
+    .simply2-cta {
+        padding: 2rem 0;
+    }
+
+    .simply2-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .simply2-cta p {
+        font-size: 1rem;
+    }
+}
+
+/* 80s/90s Retro Accents */
+.simply2-content::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a961 0%, #5dade2 50%, #c9a961 100%);
+    margin-bottom: 3rem;
+}
+
+.simply2-content::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a961 0%, #5dade2 50%, #c9a961 100%);
+    margin-top: 3rem;
+}
+</style>
+{{ end }}
