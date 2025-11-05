@@ -2,7 +2,7 @@
 title: "Simply2"
 description: "Simply2 - Petra Buchmann & Helmut Ziegler. Ihr Duo für unvergessliche 80er und 90er Jahre Musik bei Veranstaltungen, Feiern und Events."
 date: 2025-11-05
-draft: true
+draft: false
 type: "simply2"
 ---
 
