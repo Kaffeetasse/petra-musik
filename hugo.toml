@@ -40,14 +40,18 @@ enableRobotsTXT = true
     url = "/about/"
     weight = 2
   [[menu.main]]
+    name = "Simply2"
+    url = "/simply2/"
+    weight = 3
+  [[menu.main]]
     name = "Kontakt"
     url = "/contact/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Galerie"
     url = "/gallery/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Impressum"
     url = "/imprint/"
-    weight = 5
+    weight = 6
