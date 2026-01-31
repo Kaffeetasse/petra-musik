@@ -11,6 +11,48 @@
 <div class="simply2-content">
     <div class="container">
         {{ .Content }}
+
+        <h2>Simply2 Live</h2>
+
+        <div class="simply2-video-container">
+            <video controls poster="{{ "images/simply2-duo-performance.jpg" | relURL }}" class="simply2-video">
+                <source src="{{ "videos/simply2-performance.mp4" | relURL }}" type="video/mp4">
+                Ihr Browser unterstützt kein Video.
+            </video>
+        </div>
+
+        <div class="simply2-gallery-grid">
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-duo-stage.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Simply2 - Petra & Helmut in Aktion">
+                    <img src="{{ "images/simply2-duo-stage.jpg" | relURL }}" alt="Simply2 - Petra & Helmut in Aktion" class="simply2-gallery-image">
+                </a>
+            </div>
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-duo-performance.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Simply2 - Das Duo auf der Bühne">
+                    <img src="{{ "images/simply2-duo-performance.jpg" | relURL }}" alt="Simply2 - Das Duo auf der Bühne" class="simply2-gallery-image">
+                </a>
+            </div>
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-petra-stage.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Petra live auf der Bühne">
+                    <img src="{{ "images/simply2-petra-stage.jpg" | relURL }}" alt="Petra live auf der Bühne" class="simply2-gallery-image">
+                </a>
+            </div>
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-duo-lights.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Simply2 Live - Party-Atmosphäre">
+                    <img src="{{ "images/simply2-duo-lights.jpg" | relURL }}" alt="Simply2 Live - Party-Atmosphäre" class="simply2-gallery-image">
+                </a>
+            </div>
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-crowd-dancing.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Das Publikum tanzt zu Simply2">
+                    <img src="{{ "images/simply2-crowd-dancing.jpg" | relURL }}" alt="Das Publikum tanzt zu Simply2" class="simply2-gallery-image">
+                </a>
+            </div>
+            <div class="simply2-gallery-item">
+                <a href="{{ "images/simply2-stage-setup.jpg" | relURL }}" class="simply2-gallery-link" data-caption="Simply2 Bühnenaufbau">
+                    <img src="{{ "images/simply2-stage-setup.jpg" | relURL }}" alt="Simply2 Bühnenaufbau" class="simply2-gallery-image">
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -145,6 +187,105 @@
     color: #2c3e50;
 }
 
+/* Video and Gallery */
+.simply2-video-container {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.simply2-video {
+    width: 100%;
+    display: block;
+    background: #000;
+}
+
+.simply2-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.simply2-gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.simply2-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.simply2-gallery-link {
+    display: block;
+}
+
+.simply2-gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.simply2-gallery-item:hover .simply2-gallery-image {
+    transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.simply2-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.simply2-lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.simply2-lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 5px;
+}
+
+.simply2-lightbox-caption {
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.simply2-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.simply2-lightbox-close:hover {
+    color: #c9a961;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .simply2-hero {
@@ -176,23 +317,71 @@
     .simply2-cta p {
         font-size: 1rem;
     }
+
+    .simply2-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .simply2-gallery-image {
+        height: 150px;
+    }
+
+    .simply2-video-container {
+        margin-bottom: 2rem;
+    }
 }
 
-/* 80s/90s Retro Accents */
-.simply2-content::before {
-    content: "";
-    display: block;
-    height: 3px;
-    background: linear-gradient(90deg, #c9a961 0%, #5dade2 50%, #c9a961 100%);
-    margin-bottom: 3rem;
-}
-
-.simply2-content::after {
-    content: "";
-    display: block;
-    height: 3px;
-    background: linear-gradient(90deg, #c9a961 0%, #5dade2 50%, #c9a961 100%);
-    margin-top: 3rem;
-}
 </style>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryLinks = document.querySelectorAll('.simply2-gallery-link');
+
+        galleryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const imageSrc = this.getAttribute('href');
+                const caption = this.getAttribute('data-caption');
+
+                const lightbox = document.createElement('div');
+                lightbox.className = 'simply2-lightbox';
+
+                const lightboxContent = document.createElement('div');
+                lightboxContent.className = 'simply2-lightbox-content';
+
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.alt = caption;
+
+                const captionElement = document.createElement('div');
+                captionElement.className = 'simply2-lightbox-caption';
+                captionElement.textContent = caption;
+
+                const closeButton = document.createElement('button');
+                closeButton.className = 'simply2-lightbox-close';
+                closeButton.innerHTML = '&times;';
+                closeButton.addEventListener('click', function() {
+                    document.body.removeChild(lightbox);
+                });
+
+                lightboxContent.appendChild(img);
+                lightboxContent.appendChild(captionElement);
+                lightbox.appendChild(closeButton);
+                lightbox.appendChild(lightboxContent);
+
+                document.body.appendChild(lightbox);
+
+                lightbox.addEventListener('click', function(e) {
+                    if (e.target === lightbox) {
+                        document.body.removeChild(lightbox);
+                    }
+                });
+            });
+        });
+    });
+</script>
 {{ end }}
